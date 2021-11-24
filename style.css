@@ -1,0 +1,123 @@
+*{
+            padding:0;
+            margin:0;
+            outline:0;
+        }
+        .main{
+            width:100%;
+            background: #ffbb3e;
+            position:relative;
+        }
+        
+        /*add color part*/
+        .adcolor{
+            position:fixed;
+            top:40px;
+            right:40px;
+            width:1px;
+            height:1px;
+            background: yellow;
+        }
+        .red{
+            position:absolute;
+            top:-20px;
+            left:-35px;
+            width:0px;
+            height:0px;
+            Border-top:20px solid transparent;
+            Border-left:20px solid #ec6767;
+            Border-bottom:20px solid transparent;
+            border-radius: 50%;
+        }
+        .red:hover{
+            Border-left:20px solid #840000;
+        }
+        .green{
+            position:absolute;
+            top:-20px;
+            right:-35px;
+            width:0px;
+            height:0px;
+            Border-top:20px solid transparent;
+            Border-right:20px solid rgb(55, 158, 118);
+            Border-bottom:20px solid transparent;
+            border-radius: 50%;
+        }
+        .green:hover{
+            Border-right:20px solid #005700;
+        }
+        .blue{
+            position:absolute;
+            top:-35px;
+            left:-20px;
+            width:0px;
+            height:0px;
+            Border-left:20px solid transparent;
+            Border-top:20px solid #5487cf;
+            Border-right:20px solid transparent;
+            border-radius: 50%;
+        }
+        .blue:hover{
+            Border-top:20px solid #005cb7;
+        }
+        .orange{
+            position:absolute;
+            bottom:-35px;
+            right:-20px;
+            width:0px;
+            height:0px;
+            Border-left:20px solid transparent;
+            Border-bottom:20px solid rgb(222, 181, 104);
+            Border-right:20px solid transparent;
+            border-radius: 50%;
+        }
+        .orange:hover{
+            Border-bottom:20px solid #9d6600;
+        }
+        
+        
+        
+        
+        .upazila{
+			fill:rgb(235, 220, 177);
+			stroke:#909090;
+			stroke-width:0.01;
+			border:2px solid #fff;
+			-webkit-transition:all linear .2s;
+			-o-transition:all linear .2s;
+			transition:all linear .2s;
+        }
+        .actives{
+			fill:rgb(55, 158, 118);
+			stroke:#ffffff;
+		}
+		.activesr{
+			fill:#ec6767;
+			stroke:#ffffff;
+		}
+		.activesb{
+			fill:#5487cf;
+			stroke:#ffffff;
+		}
+		.activesy{
+			fill:rgb(222, 181, 104);
+			stroke:#ffffff;
+		}
+		.upazila:hover{
+			fill:rgb(84, 163, 117);			
+		}
+        .river{
+			fill:#0870ac;
+			stroke:#0045c7;
+			stroke-width:0.01;
+			border:2px solid #fff;
+			-webkit-transition:all linear .5s;
+			-o-transition:all linear .5s;
+			transition:all linear .5s;
+			/*visibility:hidden;*/
+		}
+        .river:hover{
+			fill:#e75757;
+		}
+        
+        
