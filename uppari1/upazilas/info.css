@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+/*Main menu*/
+ .menu-top{
+     width: 100%;
+     display:flex;
+     justify-content: flex-end;
+     background: rgb(6, 109, 49);
+     position: fixed;
+     font-family:'Courier New', Courier, monospace;
+     font-size: 20px;
+     color: #fff;
+     z-index: 99;
+ }
+ .section{
+     background: rgb(9, 102, 58);
+ }
+ .section p{
+     padding:5px 15px;
+     margin: 0 10px;
+     
+ }
+ .section p:hover{
+     color: chartreuse;
+     background: rgb(3, 124, 64);
+     cursor: pointer;
+ }
+/*Main Informetion Section (lefTbar,info,map)*/
+.container{
+    width: 100%;
+    background: rgb(61, 61, 61);
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width:767px) {
+        .container{
+        flex-direction:column;
+    }
+}
+.left-menu{
+    background: rgb(129, 115, 115);
+    width:10%;
+    display: flex;
+    flex-direction: column;
+}
+.menu-left{
+    width:10%;
+    position:fixed;
+}
+.left-option{
+    background: rgb(158, 18, 18);
+    width:100%;
+    text-align: center;
+}
+.info-ber{
+    background: rgb(165, 154, 218);
+    width:50%;
+
+}
+.info{
+    margin:10px;
+}
+.main-map{
+    background: rgb(212, 204, 181);
+    text-align: center;
+    position:fixed;
+    right:0;
+    width:40%;
+}
+.main-map img{
+    width:100%;
+    
+}

@@ -1,0 +1,157 @@
+		*{
+            padding:0px;
+            margin: 0px;
+            outline: 0px;
+        }
+        .background-main{
+            background: skyblue;
+        }
+        .background{
+            background: #ddd;
+        }
+.red{
+    background: red;
+}
+.green{
+    background: green;
+}
+.blue{
+    background: blue;
+}
+.orange{
+    background: orange;
+}
+.b{
+    width:16px;
+    height:16px;
+    border: 1px solid #ddd;
+    position: fixed;
+    z-index: 9999;
+}
+.m{
+    
+}
+.width{
+    width:100px;
+    height: 1px;
+}
+        .left-m{
+            background: red;
+        }
+.themap{
+    /*background: orange;*/
+    background: orange;
+    
+}
+        .right-m{
+            background: green;
+        }
+        .upazila{
+			fill:#000;
+			stroke:#909090;
+			stroke-width:0.25;
+			border:2px solid #fff;
+			-webkit-transition:all linear .2s;
+			-o-transition:all linear .2s;
+			transition:all linear .2s;
+/*			visibility:hidden;*/
+		}
+.actives{
+			fill:green;
+			stroke:#ffffff;
+		}
+		.activesr{
+			fill:#ff3a3a;
+			stroke:#ffffff;
+		}
+		.activesb{
+			fill:#1e7dff;
+			stroke:#ffffff;
+		}
+		.activesy{
+			fill:orange;
+			stroke:#ffffff;
+		}
+		.upazila:hover{
+			fill:rgba(235, 12, 55, 0.28);
+						
+		}
+        .river{
+			fill:#0045c7;
+			stroke:#0045c7;
+			stroke-width:0.25;
+			border:2px solid #fff;
+			-webkit-transition:all linear .5s;
+			-o-transition:all linear .5s;
+			transition:all linear .5s;
+			/*visibility:hidden;*/
+		}
+        .river:hover{
+			fill:#053fff;
+			
+		}
+.sea{
+			fill:#0045c7;
+			stroke:#0045c7;
+			stroke-width:0.25;
+			border:2px solid #fff;
+			-webkit-transition:all linear .5s;
+			-o-transition:all linear .5s;
+			transition:all linear .5s;
+			/*visibility:hidden;*/
+		}
+        .sea:hover{
+			fill:#053fff;
+			
+		}
+.lake{
+			fill:#05b2ff;
+			stroke:#05b2ff;
+			stroke-width:0.25;
+			border:2px solid #fff;
+			-webkit-transition:all linear .5s;
+			-o-transition:all linear .5s;
+			transition:all linear .5s;
+			/*visibility:hidden;*/
+		}
+		.lake:hover{
+			fill:#053fff;
+			
+		}
+		.water{
+			fill:#05b2ff;
+			stroke:#FFFFCC;
+			stroke-width:0.25;
+			border:2px solid #fff;
+			-webkit-transition:all linear .5s;
+			-o-transition:all linear .5s;
+			transition:all linear .5s;
+			/*visibility:hidden;*/
+		}
+		.water:hover{
+			fill:#053fff;
+			
+		}
+        
+		.add{
+			fill:#FFFFCC;
+			stroke-width:0.25;
+			visibility:visible;
+			stroke:#FFFFCC;
+            
+		}
+		.hide{
+			
+			visibility:hidden;
+			
+            
+		}
+		.bangladesh{
+			width:40px;
+			background:orange;
+			position:fixed;
+		}
+		
+
+
+		
