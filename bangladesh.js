@@ -94,23 +94,23 @@ var bangladesh = [
 
 
 //add upazila Color
-//function addupazila(e){
-//    for(var x=0; x<bangladesh.length;x++){
-//        for(var y=0; y<bangladesh[x].length;y++){
-//            for(var z=0; z<bangladesh[x][y].length;z++){
-//                bangladesh[x][y][z].onclick= function addupazila(){
-//                    (this).classList.toggle(e);
-//                }
-//            }
-//        }
-//    }
-//}
-
-function addupazilatest(x, y, z, e) {
-	for (var c = 0; c < bangladesh[x][y].length; c++) {
-		bangladesh[x][y][c].classList.toggle(e);
-	}
+function addupazila(e){
+    for(var x=0; x<bangladesh.length;x++){
+        for(var y=0; y<bangladesh[x].length;y++){
+            for(var z=0; z<bangladesh[x][y].length;z++){
+                bangladesh[x][y][z].onclick= function addupazila(){
+                    (this).classList.toggle(e);
+                }
+            }
+        }
+    }
 }
+
+//function addupazilatest(x, y, z, e) {
+//	for (var c = 0; c < bangladesh[x][y].length; c++) {
+//		bangladesh[x][y][c].classList.toggle(e);
+//	}
+//}
 
 
 
