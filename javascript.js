@@ -16,7 +16,7 @@
 
 function fetchData() {
 fetch('./data.json')
-    .then((res) => res.json())
+    .then((res) => JSON.stringify(res))
     .then((data) => {
         console.log(data)
         document.getElementById('allmap').innerHTML += `<a onmouseover="val(this.getAttribute('xlink:title'))" xlink:title="${mydata[0].title}">
