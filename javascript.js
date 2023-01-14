@@ -11,5 +11,5 @@ ${mydata[0].path}
 ${mydata[1].path}
 </g>
 </a>`;
-document.getElementById('test').innerHTML += 'ababa';
+
 
