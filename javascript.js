@@ -13,10 +13,9 @@
 //</a>`;
 
 
-
 function fetchData() {
-fetch('./data.json')
-    //.then((res) => JSON.stringify(res))
+    fetch(datass)
+    .then((res) => JSON.stringify(res))
     .then((data) => {
         console.log(data)
         document.getElementById('allmap').innerHTML += `<a onmouseover="val(this.getAttribute('xlink:title'))" xlink:title="${data[0].title}">
@@ -32,7 +31,6 @@ ${data[1].path}
         })
             .catch((error) => {
                 console.log(`Error Fetching data : ${error}`)
-                document.getElementById('country').innerHTML = 'Error Loading Data'
             });
 
 }
