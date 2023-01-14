@@ -1,4 +1,4 @@
-        
+
         //Rangpur Division
         //panchagarh
 		var Tetulia = document.getElementById("Tetulia");

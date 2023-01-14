@@ -6,42 +6,41 @@
     <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="style.css" />
     <script>
-        function val(a) {
-            document.querySelector('#NameBar').innerHTML = a;
-        }
+        
     </script>
-    <!--<script type="text/javascript" src="data.json"></script>
-    <script type="text/javascript" src="javascript.js"></script>-->
+    <script src="data.json"></script>
+    <script type="module" src="javascript.js"></script>
 </head>
 <body>
     <div class="main">
 
         <div class="adcolor">
-            <div class="b red" onclick="addupazilar()"></div>
-            <div class="b green" onclick="addupazila()"></div>
-            <div class="b blue" onclick="addupazilab()"></div>
-            <div class="b orange" onclick="addupazilay()"></div>
+            <div class="b red" onclick="addupazila('activesr')"></div>
+            <div class="b green" onclick="addupazila('actives')"></div>
+            <div class="b blue" onclick="addupazila('activesb')"></div>
+            <div class="b orange" onclick="addupazila('activesy')"></div>
             <h1 id="NameBar" class="adcolortext">
             </h1>
         </div>
+        <div class="" onclick="addupazilatest()">Test</div>
 
         <!--<div class="options">
-            <div class="viewbtn"><p>save </p></div>
-            <div class="viewbtn"><p>fullview </p></div>
-            <div class="viewbtn"><p>edit</p></div>
-            <div class="viewbtn"><p>news</p></div>
-            <div class="viewbtn"><p>Bangladesh</p></div>
-            <div class="viewbtn"><p>west bengal</p></div>
-            <div class="viewbtn"><p>tripura</p></div>
-            <div class="viewbtn"><p>barak vally</p></div>
-            <div class="viewbtn"><p>goalpara</p></div>
-            <div class="viewbtn"><p>water</p></div>
-        </div>-->
+        <div class="viewbtn"><p>save </p></div>
+        <div class="viewbtn"><p>fullview </p></div>
+        <div class="viewbtn"><p>edit</p></div>
+        <div class="viewbtn"><p>news</p></div>
+        <div class="viewbtn"><p>Bangladesh</p></div>
+        <div class="viewbtn"><p>west bengal</p></div>
+        <div class="viewbtn"><p>tripura</p></div>
+        <div class="viewbtn"><p>barak vally</p></div>
+        <div class="viewbtn"><p>goalpara</p></div>
+        <div class="viewbtn"><p>water</p></div>
+    </div>-->
         <div class="map">
             <svg id="allmap" viewBox="-300 -5 2000 2075">
 
 
-                <a onmouseover="val(this.getAttribute('xlink:title'))" xlink:title="Dhaka City">
+                <!--<a onmouseover="val(this.getAttribute('xlink:title'))" xlink:title="Dhaka City">
                     <g class="upazila additonalupazila" id="DhakaCity">
                         <path d="M762.9,856.4L762.9,856.4
       C762.9,856.5,763,856.5,762.9,856.4L762.9,856.4z" />
@@ -175,7 +174,7 @@
                         <path d="M760,833.1c0,0,0.1,0.1,0.1,0.1v-0.5v-0.1
       h-0.5c0,0,0,0.1,0.1,0.1C759.7,832.8,759.8,832.9,760,833.1z" />
                     </g>
-                </a>
+                </a>-->
                 <a onmouseover="val(this.getAttribute('xlink:title'))" xlink:title="Nawabganj">
                     <g class="upazila additonalupazila" id="dhNawabganj">
                         <path d="M741.6,918.1c-0.6-0.7-1.6-1.5-2.1-1.9
