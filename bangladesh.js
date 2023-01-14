@@ -74,7 +74,7 @@ var bangladesh =   [
 					
 					];
 
-var upazila = document.getElementByClassName("upazila");
+/*var upazila = document.getElementByClassName("upazila");*/
 //function bangladesh(){
 //			for(var x=0; x<bangladesh.length;x++){
 //                for(var y=0; y<bangladesh[x].length;y++){
@@ -87,20 +87,20 @@ var upazila = document.getElementByClassName("upazila");
 
 
 //active upazila
-function aupazila(){
-    for(var x=0; x<bangladesh.length;x++){
-        for(var y=0; y<bangladesh[x].length;y++){
-            for(var z=0; z<bangladesh[x][y].length;z++){
-                bangladesh[x][y][z].onclick= function activeupazila(){
-                    if(document.getElementByClassName("upazila") == clicked){
-                        upazila.classList.remove("actives");
-                        (this).classList.add("actives");
-                    }
-                }
-            }
-        }
-    }
-}
+//function aupazila(){
+//    for(var x=0; x<bangladesh.length;x++){
+//        for(var y=0; y<bangladesh[x].length;y++){
+//            for(var z=0; z<bangladesh[x][y].length;z++){
+//                bangladesh[x][y][z].onclick= function activeupazila(){
+//                    if(document.getElementByClassName("upazila") == clicked){
+//                        upazila.classList.remove("actives");
+//                        (this).classList.add("actives");
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
 
 
 

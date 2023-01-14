@@ -1,123 +1,184 @@
-*{
-            padding:0;
-            margin:0;
-            outline:0;
-        }
-        .main{
-            width:100%;
-            background: #ffbb3e;
-            position:relative;
-        }
-        
-        /*add color part*/
-        .adcolor{
-            position:fixed;
-            top:40px;
-            right:40px;
-            width:1px;
-            height:1px;
-            background: yellow;
-        }
-        .red{
-            position:absolute;
-            top:-20px;
-            left:-35px;
-            width:0px;
-            height:0px;
-            Border-top:20px solid transparent;
-            Border-left:20px solid #ec6767;
-            Border-bottom:20px solid transparent;
-            border-radius: 50%;
-        }
-        .red:hover{
-            Border-left:20px solid #840000;
-        }
-        .green{
-            position:absolute;
-            top:-20px;
-            right:-35px;
-            width:0px;
-            height:0px;
-            Border-top:20px solid transparent;
-            Border-right:20px solid rgb(55, 158, 118);
-            Border-bottom:20px solid transparent;
-            border-radius: 50%;
-        }
-        .green:hover{
-            Border-right:20px solid #005700;
-        }
-        .blue{
-            position:absolute;
-            top:-35px;
-            left:-20px;
-            width:0px;
-            height:0px;
-            Border-left:20px solid transparent;
-            Border-top:20px solid #5487cf;
-            Border-right:20px solid transparent;
-            border-radius: 50%;
-        }
-        .blue:hover{
-            Border-top:20px solid #005cb7;
-        }
-        .orange{
-            position:absolute;
-            bottom:-35px;
-            right:-20px;
-            width:0px;
-            height:0px;
-            Border-left:20px solid transparent;
-            Border-bottom:20px solid rgb(222, 181, 104);
-            Border-right:20px solid transparent;
-            border-radius: 50%;
-        }
-        .orange:hover{
-            Border-bottom:20px solid #9d6600;
-        }
-        
-        
-        
-        
-        .upazila{
-			fill:rgb(235, 220, 177);
-			stroke:#909090;
-			stroke-width:0.01;
-			border:2px solid #fff;
-			-webkit-transition:all linear .2s;
-			-o-transition:all linear .2s;
-			transition:all linear .2s;
-        }
-        .actives{
-			fill:rgb(55, 158, 118);
-			stroke:#ffffff;
-		}
-		.activesr{
-			fill:#ec6767;
-			stroke:#ffffff;
-		}
-		.activesb{
-			fill:#5487cf;
-			stroke:#ffffff;
-		}
-		.activesy{
-			fill:rgb(222, 181, 104);
-			stroke:#ffffff;
-		}
-		.upazila:hover{
-			fill:rgb(84, 163, 117);			
-		}
-        .river{
-			fill:#0870ac;
-			stroke:#0045c7;
-			stroke-width:0.01;
-			border:2px solid #fff;
-			-webkit-transition:all linear .5s;
-			-o-transition:all linear .5s;
-			transition:all linear .5s;
-			/*visibility:hidden;*/
-		}
-        .river:hover{
-			fill:#e75757;
-		}
-        
-        
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+.main {
+    width: 100%;
+    background: #ffbb3e;
+    position: relative;
+}
+
+.map {
+    width: 100%;
+}
+
+.clr {
+    clear: both;
+}
+
+/*add color part*/
+
+.adcolor {
+    position: fixed;
+    top: 100px;
+    right: 100px;
+    width: 1px;
+    height: 1px;
+    background: yellow;
+}
+
+.red {
+    position: absolute;
+    top: -40px;
+    left: -55px;
+    width: 0px;
+    height: 0px;
+    Border-top: 40px solid transparent;
+    Border-left: 50px solid #ec6767;
+    Border-bottom: 40px solid transparent;
+    border-radius: 50%;
+}
+
+    .red:hover {
+        Border-left: 50px solid #840000;
+    }
+
+.green {
+    position: absolute;
+    top: -40px;
+    right: -55px;
+    width: 0px;
+    height: 0px;
+    Border-top: 40px solid transparent;
+    Border-right: 50px solid rgb(55, 158, 118);
+    Border-bottom: 40px solid transparent;
+    border-radius: 50%;
+}
+
+    .green:hover {
+        Border-right: 50px solid #005700;
+    }
+
+.blue {
+    position: absolute;
+    top: -55px;
+    left: -40px;
+    width: 0px;
+    height: 0px;
+    Border-left: 40px solid transparent;
+    Border-top: 50px solid #5487cf;
+    Border-right: 40px solid transparent;
+    border-radius: 50%;
+}
+
+    .blue:hover {
+        Border-top: 50px solid #005cb7;
+    }
+
+.orange {
+    position: absolute;
+    bottom: -55px;
+    right: -40px;
+    width: 0px;
+    height: 0px;
+    Border-left: 40px solid transparent;
+    Border-bottom: 50px solid rgb(222, 181, 104);
+    Border-right: 40px solid transparent;
+    border-radius: 50%;
+}
+
+    .orange:hover {
+        Border-bottom: 50px solid #9d6600;
+    }
+
+.adcolortext {
+    position: absolute;
+    top: 65px;
+    left: -100px;
+    text-align: center;
+    width:200px;
+}
+
+#NameBar {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-family: cursive;
+    color: darkgoldenrod;
+    font-weight: 700;
+}
+
+.upazila {
+    fill: rgb(235, 220, 177);
+    stroke: #909090;
+    stroke-width: 0.01;
+    border: 2px solid #fff;
+    -webkit-transition: all linear .2s;
+    -o-transition: all linear .2s;
+    transition: all linear .2s;
+}
+/*
+.additonalupazila{
+	fill:#fff;
+}
+.additonalupazila:hover{
+	fill:rgb(84, 163, 117);
+}*/
+.actives {
+    fill: rgb(55, 158, 118);
+    stroke: #ffffff;
+}
+
+.activesr {
+    fill: #ec6767;
+    stroke: #ffffff;
+}
+
+.activesb {
+    fill: #5487cf;
+    stroke: #ffffff;
+}
+
+.activesy {
+    fill: rgb(222, 181, 104);
+    stroke: #ffffff;
+}
+
+.upazila:hover {
+    fill: rgb(84, 163, 117);
+}
+
+.river {
+    fill: #0870ac;
+    stroke: #0045c7;
+    stroke-width: 0.01;
+    border: 2px solid #fff;
+    -webkit-transition: all linear .5s;
+    -o-transition: all linear .5s;
+    transition: all linear .5s;
+    /*visibility:hidden;*/
+}
+
+    .river:hover {
+        fill: #e75757;
+    }
+
+.options {
+    width: 80px;
+    position: fixed;
+    top: 80px;
+    right: 0px;
+}
+
+.viewbtn {
+    width: 100%;
+    background: rgb(169, 106, 255);
+    margin: 5px 0;
+}
+
+    .viewbtn p {
+        size: 16px;
+        color: #ffffff;
+        text-align: center;
+    }
