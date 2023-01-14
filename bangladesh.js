@@ -119,7 +119,7 @@ function addupazilatest(x, y, z, e) {
 
 
 //name Select
-function val(a) {
+function nameView(a) {
 	document.querySelector('#NameBar').innerHTML = a;
 }
 
