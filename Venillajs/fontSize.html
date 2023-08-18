@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font size</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1200px;
+            flex-direction: column;
+            margin: 12px auto;
+            padding: 0 20px;
+        }
+        .container .buttons{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-bottom: 20px;
+        }
+        .container .buttons .btn{
+            padding: 0 10px;
+            display: inline-block;
+            background: #ddd;
+            color:#fff;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .container .buttons .btn.active{
+            background: #444;
+        }
+        .container .buttons .btn:nth-child(2){
+            font-size: 1.5em;
+        }
+        .container .buttons .btn:nth-child(3){
+            font-size: 2em;
+        }
+        .container .content{
+            font-size: 1em;
+            color: #444;
+        }
+        .container .content h2,
+        .container .content p{
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="buttons">
+            <span class="btn active" onclick="document.getElementById('text').style.fontSize = '1em'">A</span>
+            <span class="btn" onclick="document.getElementById('text').style.fontSize = '1.25em'">A</span>
+            <span class="btn" onclick="document.getElementById('text').style.fontSize = '1.75em'">A</span>
+        </div>
+        <div class="content" id="text">
+            <h2>Change Font Size</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eaque voluptatum nemo, eius quasi nam cumque porro! Odit pariatur dolor veritatis, perspiciatis ut eveniet nam at, minima magnam ad magni aperiam, quas commodi alias. Laborum eveniet doloribus veniam ratione totam consequuntur itaque eligendi ullam recusandae officia! Doloremque, veniam magni ducimus illo voluptates optio repellendus ratione debitis adipisci placeat pariatur molestias, corporis quisquam ab quas, soluta perspiciatis tempora quo. Dolorum animi porro ducimus deserunt numquam distinctio ipsam ullam dignissimos provident sapiente alias consequatur temporibus, in obcaecati dolorem, suscipit minus illum nihil totam. Quasi voluptas veniam dicta ipsam velit necessitatibus autem dolor? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem expedita quam itaque officia sed vel autem, nihil aperiam aut porro sint et dolore officiis iure saepe! Sint odit nihil quisquam deserunt et impedit eum dolorum beatae doloribus assumenda? Molestias, magni. Molestiae ullam labore explicabo dolor. Enim alias hic animi nam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae minus distinctio omnis nihil voluptate exercitationem tempore officiis, officia repudiandae nemo nesciunt sed iure nisi quo nobis ducimus modi velit? Fugit?</p>
+        </div>
+    </div>
+    <script>
+        let btn = document.querySelectorAll('.btn');
+        function activeLink(){
+            btn.forEach((item) =>
+                item.classList.remove('active'));
+                this.classList.add('active');
+        }
+        btn.forEach((item)=>
+            item.addEventListener('click',activeLink)
+        );
+    </script>
+</body>
+</html>

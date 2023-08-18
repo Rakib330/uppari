@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+:root {
+    --mcolor: rgb(164, 251, 222);
+    --scolor: #57d463;
+    --gradiant: linear-gradient(to right, #92FE9D, #00C9FF);
+    --fonta: 'Open Sans', sans-serif;
+    --fontb: 'Luckiest Guy', cursive;
+}
+
+body {
+    background: var(--gradiant);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-container {
+    background: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem #999;
+    width: calc(100vw - 80vw);
+    max-width: 100%;
+}
+
+@media(max-width:998px) {
+    .div-container {
+        width: calc(100vw - 65vw);
+        max-width: 100%;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 .1rem .2rem #999;
+    animation: haski 1s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes haski {
+    from {
+        text-shadow: -.1rem .1rem .2rem #999;
+    }
+    to {
+        text-shadow: .1rem .1rem .2rem #999;
+    }
+}
+
+.form-container {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.input-container {
+    margin: .1rem 0;
+    width: 100%;
+    position: relative;
+}
+
+.input-container .tt {
+    position: absolute;
+    top: 36px;
+    right: 5px;
+    visibility: hidden;
+}
+
+.input-container small {
+    visibility: hidden;
+}
+
+.input-container label {
+    display: inline-block;
+    margin-bottom: .3rem;
+    font-family: var(--fontb);
+}
+
+.input {
+    width: 100%;
+    border: 1px solid #999;
+    border-radius: 1rem;
+    display: block;
+    font-size: .8rem;
+    font-family: var(--fontb);
+    padding: .4rem 0 .4rem .3rem;
+}
+
+.input-container input:focus {
+    outline: 0;
+    border: 2px solid #555;
+}
+
+.input-container.success input {
+    border: 2px solid rgb(10, 182, 39);
+}
+
+.input-container.error input {
+    border: 2px solid rgb(224, 85, 80);
+}
+
+.submit {
+    transition: all .3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: var(--scolor);
+    cursor: pointer;
+}
+
+.submit:hover {
+    background: var(--mcolor);
+    color: rgb(0, 173, 14);
+}

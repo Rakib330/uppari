@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Quiz</title>
+    <link rel="stylesheet" href="./all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./all.min.js"></script>
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+    <div class="box-container">
+        <div class="header">
+            <h3 id="msg">অংক করো</h3>
+            <span id="total-points">পুর্নমানঃ-
+                <span id="total-point">১০</span>
+            </span>
+        </div>
+        <div id="question-container" class="question-container">
+            <table id="math-container" class="math-container">
+                <tr>
+                    <td class="math-items no" id="no">1</td>
+                    <td class="math-qitems v1" id="v1"> 10 </td>
+                    <td class="math-qitems oper" id="oper"> + </td>
+                    <td class="math-qitems v2" id="v2"> 20 </td>
+                    <td class="math-qitems statement" id="statement"> = </td>
+                    <td><input onkeyup="result(this)" class="math-qinput answ" placeholder="?" type="text" id="answ">
+                    </td>
+                    <td class="math-items correct-ans" id="correct-ans">00</td>
+                    <td class="math-items thumbs" id="thumbs"></td>
+                    <td class="math-items points" id="points">0</td>
+                </tr>
+                <tr>
+                    <td class="math-items no" id="no">2</td>
+                    <td class="math-qitems v1" id="v1"> 10 </td>
+                    <td class="math-qitems oper" id="oper"> + </td>
+                    <td class="math-qitems v2" id="v2"> 20 </td>
+                    <td class="math-qitems statement" id="statement"> = </td>
+                    <td><input onkeyup="result(this)" class="math-qinput answ" placeholder="?" type="text" id="answ"></td>
+                    <td class="math-items correct-ans" id="correct-ans">00</td>
+                    <td class="math-items thumbs" id="thumbs"></td>
+                    <td class="math-items points" id="points">0</td>
+                </tr>
+                <tr>
+                    <td class="math-items no" id="no">3</td>
+                    <td class="math-qitems v1" id="v1"> 10 </td>
+                    <td class="math-qitems oper" id="oper"> + </td>
+                    <td class="math-qitems v2" id="v2"> 20 </td>
+                    <td class="math-qitems statement" id="statement"> = </td>
+                    <td class="math-qitems"><input onkeyup="result(this)" class="math-qinput answ" placeholder="?" type="text" id="answ"></td>
+                    <td class="math-items correct-ans" id="correct-ans">00</td>
+                    <td class="math-items thumbs" id="thumbs"></td>
+                    <td class="math-items points" id="points">0</td>
+                </tr>
+                <tr>
+                    <td class="math-items no" id="no">4</td>
+                    <td class="math-qitems v1" id="v1"> 10 </td>
+                    <td class="math-qitems oper" id="oper"> + </td>
+                    <td class="math-qitems v2" id="v2"> 20 </td>
+                    <td class="math-qitems statement" id="statement"> = </td>
+                    <td><input onkeyup="result(this)" class="math-qinput answ" placeholder="?" type="text" id="answ"></td>
+                    <td class="math-items correct-ans" id="correct-ans">00</td>
+                    <td class="math-items thumbs" id="thumbs"></td>
+                    <td class="math-items points" id="points">0</td>
+                </tr>
+                <tr>
+                    <td class="math-items no" id="no">5</td>
+                    <td class="math-qitems v1" id="v1"> 10 </td>
+                    <td class="math-qitems oper" id="oper"> + </td>
+                    <td class="math-qitems v2" id="v2"> 20 </td>
+                    <td class="math-qitems statement" id="statement"> = </td>
+                    <td><input onkeyup="result(this)" class="math-qinput answ" placeholder="?" type="text" id="answ">
+                    </td>
+                    <td class="math-items correct-ans" id="correct-ans">00</td>
+                    <td class="math-items thumbs" id="thumbs"></td>
+                    <td class="math-items points" id="points">0</td>
+                </tr>
+            </table>
+
+            <!-- <div id="math-container" class="math-container">
+
+                <div class="csvalue math-serial">
+                    <p class="jsvalue math-items no" id="no">1</p>
+                </div>
+                <div class="csvalue math-question">
+                    <p class="jsvalue math-qitems v1" id="v1"> 10 </p>
+                    <p class="jsvalue math-qitems oper" id="oper"> + </p>
+                    <p class="jsvalue math-qitems v2" id="v2"> 20 </p>
+                    <p class="jsvalue math-qitems statement" id="statement"> = </p>
+                    <p class="jsvalue"><input class="jsvalue math-qinput answ" placeholder="?" type="text" id="answ"></p>
+                </div>
+                <div class="csvalue math-other">
+                    <p class="jsvalue math-items correct-ans" id="correct-ans">00</p>
+                    <p class="jsvalue math-items thumbs" id="thumbs"></p>
+                    <p class="jsvalue math-items points" id="points">0</p>
+                </div>
+            </div> -->
+
+
+
+            <button onclick="jsgame()" name="submit" id="submit" class="btn-submit">Submit</button>
+        </div>
+
+    </div>
+</body>
+
+</html>

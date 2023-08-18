@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .bg{
+          width: 100vw;
+          height: 100vh;  
+          background: #000;
+          position: relative;
+          overflow: hidden;
+        }
+        .brownia{
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            border-radius: 50%;
+        }
+        .pixels{
+            position: absolute;
+            height: 1px;
+            width: 1px;
+        }
+
+        .tree{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+        }
+        .treepixels{
+            position: absolute;
+            height: 5px;
+            width: 5px;
+            border-radius: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="bg">
+        <div style="width: 100%;display: flex;justify-content: center;">
+            <input type="number" id="ArmyCount" style="width: 30%;height: 30px;text-align: center;" placeholder="Type Army Count" />
+            <button onclick="Browninan()">Browninan</button>
+            <button onclick="Art()">Tree</button>
+            <button onclick="refresh()">Refresh</button>
+        </div>
+    </div>
+    <script>
+        let iterationCount = 0;
+        const maxIterations = 2500;
+
+
+        var MaxHeight = 600;
+        var MaxWidth = 1350;
+        
+
+        var gettop = []; 
+        var getleft = []; 
+        var Pathcolor = []; 
+        function Art(){
+            var inputValue = document.getElementById('ArmyCount');
+
+            let topPath = getRandomNumber(0,MaxHeight);
+            let leftPath = getRandomNumber(0,MaxWidth);
+            
+            var armyCount = parseInt(inputValue.value); // Assuming 'ArmyCount' is an input element
+            var container = document.querySelector(".bg"); // Replace 'container' with the ID of the element where you want to add the spans
+            
+            var existingBrownias = document.querySelectorAll(".tree");
+            existingBrownias.forEach(function(tree) {
+                tree.remove();
+            });
+
+            for (var i = 0; i < armyCount; i++) {
+                var tree = document.createElement("span");
+                tree.className = "tree"; 
+                container.appendChild(tree);
+            }
+
+            var elements = document.getElementsByClassName("tree");
+
+                for (var i = 0; i < elements.length; i++) {
+
+                    var colors = ['#ccb593','#ae8e6a','#896d4b'];
+
+                    var colord = colors[getRandomNumber(0,2)];
+
+                    gettop[i] = '600';
+                    getleft[i] = getRandomNumber(500,700);
+
+                    Pathcolor[i] = colord;
+
+                    elements[i].style.backgroundColor = colord;
+                    elements[i].style.boxShadow =  '0px 0px 8px 5px '+ colord;
+                }
+            var bg = document.querySelector(".bg");
+            
+            const intervalId = setInterval(function() {
+                
+                let sum = 0;
+                for (let i = 0; i < getleft.length; i++) {
+                    sum += getleft[i];
+                }
+
+                let centerValue = sum/getleft.length;
+
+                for (var i = 0; i < elements.length; i++) {
+                    
+                    gettop[i] = getRandomNumber(gettop[i]-=3,gettop[i]+=3);
+                    
+                    var autoNumber = getRandomNumber(0,2);
+                   if(gettop[i]>580){
+                          if(getleft[i] < getRandomNumber(centerValue-50,centerValue+50)){
+                            if(getRandomNumber(0,2) == 0){
+                                getleft[i]+=3;
+                            }else if(getRandomNumber(0,2) == 1){
+                                getleft[i]+=6;
+                            }else{
+                                getleft[i]+=8;
+                            }
+                          }else if(getleft[i] >getRandomNumber(centerValue-50,centerValue+50)){
+                            if(getRandomNumber(0,2) == 0){
+                                getleft[i]-=3;
+                            }else if(getRandomNumber(0,2) == 1){
+                                getleft[i]-=6;
+                            }else{
+                                getleft[i]-=8;
+                            }
+                          }else{
+                              getTreeleftPath(getleft[i]);
+                          }
+                     }else if(gettop[i] < 300){
+                          if(getleft[i] < getRandomNumber(centerValue-50,centerValue+50)){
+                            if(getRandomNumber(0,2) == 0){
+                                getleft[i];
+                            }else if(getRandomNumber(0,2) == 1){
+                                getleft[i]+=6;
+                            }else{
+                                getleft[i]-=8;
+                            }
+                          }else if(getleft[i] >getRandomNumber(centerValue-50,centerValue+50)){
+                            if(getRandomNumber(0,2) == 0){
+                                getleft[i];
+                            }else if(getRandomNumber(0,2) == 1){
+                                getleft[i]-=6;
+                            }else{
+                                getleft[i]+=8;
+                            }
+                          }else{
+                              getleft[i];
+                          }
+                     }else{
+                         //getleft[i] = getTreeleftPath(getleft[i]);
+                         getleft[i] =  getRandomNumber(600,640);
+                     }
+
+                    
+
+                    //getTreeleftPath(getleft[i]):getTreeleftPath(getleft[i]);
+                    elements[i].style.top = gettop[i] +'px';
+                    elements[i].style.left = getleft[i] +'px';
+                    
+                    //creating path
+                    var newElement = document.createElement("span");
+                    newElement.className = 'treepixels';
+                    newElement.style.top = gettop[i] +'px';
+                    newElement.style.left = getleft[i] +'px';
+
+
+                     if(gettop[i] >300){
+                        
+                    newElement.style.backgroundColor = Pathcolor[i];
+                        newElement.style.height = '20px';
+                        newElement.style.width = '20px';
+                     }
+
+                     if(gettop[i] > 580){
+                        
+                    newElement.style.backgroundColor = Pathcolor[i];
+                        newElement.style.height = '5px';
+                        newElement.style.width = '5px';
+                     }
+                     if(gettop[i] < 300){
+                        
+                    newElement.style.backgroundColor = Pathcolor[i];
+                        newElement.style.height =(gettop[i]-280) + 'px';
+                        newElement.style.width = (gettop[i]-280) + 'px';
+                     }
+
+                     if(gettop[i] < 200){
+                        newElement.style.backgroundColor = 'green';
+                        newElement.style.height ='50px';
+                        newElement.style.width = '50px';
+                        newElement.style.border = '5px solid #66FF99';
+                        newElement.style.marginTop = '-10px';
+                        newElement.style.marginLeft = '-10px';
+                    }
+                    bg.appendChild(newElement);
+
+                    
+                    if (gettop[i] <= 150) {
+                        clearInterval(intervalId); // Stop the interval when maximum iterations are reached
+                        return;
+                    }
+                }
+                
+            }, 1);
+        }
+        
+        function getTreeleftPath(leftP){
+            var autoNumber = getRandomNumber(0,1);
+            if(autoNumber == 0){
+                ++leftP
+            }else {
+                --leftP
+            }
+            return leftP;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function Browninan () {
+            var inputValue = document.getElementById('ArmyCount');
+
+            let topPath = getRandomNumber(0,MaxHeight);
+            let leftPath = getRandomNumber(0,MaxWidth);
+
+
+            var armyCount = parseInt(inputValue.value); // Assuming 'ArmyCount' is an input element
+            var container = document.querySelector(".bg"); // Replace 'container' with the ID of the element where you want to add the spans
+            
+            // Remove existing 'brownia' elements if any
+            var existingBrownias = document.querySelectorAll(".brownia");
+            existingBrownias.forEach(function(brownia) {
+                brownia.remove();
+            });
+            
+            // Create and append new 'brownia' spans based on the army count
+            for (var i = 0; i < armyCount; i++) {
+                var brownia = document.createElement("span");
+                brownia.className = "brownia"; // Use 'className' instead of 'addclassName'
+                container.appendChild(brownia);
+            }
+        // });
+        // document.addEventListener("DOMContentLoaded", function() {
+            
+            var elements = document.getElementsByClassName("brownia");
+
+                for (var i = 0; i < elements.length; i++) {
+                    var colord = randColor();
+
+                    gettop[i] = topPath;//getRandomNumber(0,MaxHeight);//
+                    getleft[i] = leftPath;//getRandomNumber(0,MaxWidth);//
+
+                    Pathcolor[i] = colord;
+
+                    elements[i].style.backgroundColor = colord;
+                    elements[i].style.boxShadow =  '0px 0px 8px 5px '+ colord;
+                }
+            var bg = document.querySelector(".bg");
+
+            setInterval(function() {
+                for (var i = 0; i < elements.length; i++) {
+                    //common value
+                    gettop[i] = gettopPath(gettop[i]);
+                    getleft[i] = getleftPath(getleft[i]);
+                    elements[i].style.top = gettop[i] +'px';
+                    elements[i].style.left = getleft[i] +'px';
+                    
+                    //creating path
+                    var newElement = document.createElement("span");
+                    newElement.className = 'pixels';
+                    newElement.style.backgroundColor = Pathcolor[i];
+                    newElement.style.top = gettop[i] +'px';
+                    newElement.style.left = getleft[i] +'px';
+                    bg.appendChild(newElement);
+                }
+                
+            }, 1);
+        }
+        function gettopPath(topP){
+            var autoNumber = getRandomNumber(0,4);
+            if(autoNumber == 0){
+                ++topP
+            }else if(autoNumber == 1){
+                --topP
+            }else if(autoNumber == 2){
+                topP
+            }else if(autoNumber == 3){
+                topP+=2
+            }else {
+                topP -=2
+            }
+
+            if(topP > MaxHeight){
+                --topP
+            }
+
+
+            return topP;
+        }
+        function getleftPath(leftP){
+            var autoNumber = getRandomNumber(0,4);
+            if(autoNumber == 0){
+                ++leftP
+            }else if(autoNumber == 1){
+                --leftP
+            }else if(autoNumber == 2){
+                leftP
+            }else if(autoNumber == 3){
+                leftP +=2
+            }else {
+                leftP -=2
+            }
+
+            if(leftP > MaxWidth){
+                --leftP
+            }
+
+
+            return leftP;
+        }
+
+        function randColor(){
+            var values = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
+            var colorCode = '#';
+            for(var i = 0;i<6;i++){
+                colorCode +=values[getRandomNumber(0,15)];
+            }
+            return colorCode;
+        }
+
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function refresh(){
+            var pixels = document.querySelectorAll(".pixels");
+            pixels.forEach(function(pixel) {
+                pixel.remove();
+            });
+
+
+            var Treepixels = document.querySelectorAll(".treepixels");
+            Treepixels.forEach(function(pixel) {
+                pixel.remove();
+            });
+        }
+    </script>
+        
+</body>
+</html>

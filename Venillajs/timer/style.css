@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+body{
+   background:url(img/bg.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   display:flex;
+   flex-direction:column;
+   min-height: 100vh;
+   align-items: center;
+   justify-content:center;
+   font-family: cursive;
+   color:#fff;
+}
+#timer{
+    margin-top:-20rem;
+}
+h2{
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 0px 0px 5px #888;
+    }
+.timer-body{
+    display: flex;
+}
+.big-text{
+    font-size: 5rem;
+    line-height:1;
+    margin:0 2rem;
+    font-weight: bold;
+    text-shadow:0px 0px 10px #999 ;
+}
+.timer-content{
+    text-align: center;
+}
+.timer-content span{
+    font-size: 1.2rem;
+    text-shadow:0px 0px 3px #555 ;
+}

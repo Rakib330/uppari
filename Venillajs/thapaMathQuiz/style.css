@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    box-sizing: border-box;
+    background: #ddd6f3;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #faaca8, #ddd6f3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-position: center center;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-container {
+    background: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem #999;
+    animation: neon 2s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes neon {
+    from {
+        box-shadow: -2rem -1rem 1rem #999;
+    }
+    to {
+        box-shadow: 2rem 1rem 1rem #999;
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    text-align: center;
+    font-size: larger;
+    animation: moves 2s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes moves {
+    from {
+        transform: transformX(1rem);
+        color: #000;
+        text-shadow: 0 0 .1rem #999;
+    }
+    to {
+        transform: translateX(-1rem);
+        color: #fff;
+        text-shadow: 0 0 .1rem #333;
+    }
+}
+
+#total-points {
+    display: flex;
+    justify-content: flex-end;
+    font-size: .8rem;
+}
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-submit {
+    padding: 1rem;
+    background: green;
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 3rem;
+    cursor: pointer;
+    box-shadow: 0 .3rem rgb(192, 192, 192);
+    outline: none;
+}
+
+.btn-submit:hover {
+    background: rgb(10, 161, 10);
+}
+
+.btn-submit:active {
+    background: rgb(2, 190, 2);
+    box-shadow: 0 .2rem #666;
+    transform: translateY(.1rem);
+}
+
+.math-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: space-evenly;
+}
+
+.math-question {
+    display: flex;
+    flex-direction: row;
+}
+
+.math-other {
+    display: flex;
+    flex-direction: row;
+}
+
+.math-other i {
+    color: #000;
+    font-size: 1rem;
+}
+
+.math-items {
+    padding: 0.5rem;
+}
+
+.no {
+    color: red;
+}
+
+.math-qitems {
+    padding: 0.5rem .1rem;
+    font-weight: bold;
+}
+
+.math-qinput {
+    width: 5rem;
+    border: none;
+    background: none;
+    outline: none;
+}

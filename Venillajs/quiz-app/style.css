@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+body{
+    background: url(./img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-family: cursive;
+}
+.quiz-box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    background:rgb(206, 206, 206);
+}
+h2{
+    padding:0 1rem;
+}
+.btn{
+    width:100%;
+    background: #000;
+    border:none;
+    color:aliceblue;
+    padding:1rem 0;
+    cursor: pointer;
+}
+.btn:hover{
+    background: #333;
+}
