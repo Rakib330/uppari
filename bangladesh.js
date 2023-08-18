@@ -120,7 +120,12 @@ function addupazila(e){
 
 //name Select
 function nameView(a) {
-	document.querySelector('#NameBar').innerHTML = a;
+	if(a){
+		document.querySelector('#NameBar').innerHTML = a;
+	}else{
+		document.querySelector('#NameBar').innerHTML = 'India';
+	}
+	
 }
 
     
