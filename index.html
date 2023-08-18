@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-    <div class="main">
+    <div class="main"  onmouseover="nameView(this.getAttribute('xlink:title'))" xlink:title="India">
 <div class="upperMenus" style="display:flex;justify-content:space-around">
     <a type="button" href="./Venillajs/brownian motion.html">Brownian Motion</a>
     <a type="button" href="./Venillajs/Eyes.html">Eyes</a>
@@ -35,7 +35,7 @@
             <div class="b green" onclick="addupazila('actives')"></div>
             <div class="b blue" onclick="addupazila('activesb')"></div>
             <div class="b orange" onclick="addupazila('activesy')"></div>
-            <div id="NameBar"></div>
+            <h1 id="NameBar" class="adcolortext">India</h1>
         </div>
         <div class="map">
             <svg id="allmap" viewBox="-300 -5 2000 2075">
