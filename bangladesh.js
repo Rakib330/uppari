@@ -106,20 +106,9 @@ function addupazila(e){
     }
 }
 
-//function addupazilatest(x, y, z, e) {
-//	for (var c = 0; c < bangladesh[x][y].length; c++) {
-//		bangladesh[x][y][c].classList.toggle(e);
-//	}
-//}
-
-
-
-
-
-
-
 //name Select
 function nameView(a) {
+	console.log(a);
 	if(a){
 		document.querySelector('#NameBar').innerHTML = a;
 	}else{
