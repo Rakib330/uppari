@@ -106,6 +106,25 @@ function addupazila(e){
     }
 }
 
+
+function addDistrict(e) {
+    for (var x = 0; x < bangladesh.length; x++) {
+        for (var y = 0; y < bangladesh[x].length; y++) {
+            for (var z = 0; z < bangladesh[x][y].length; z++) {
+                (function(x, y) {
+                    bangladesh[x][y][z].onclick = function() {
+                        for (var c = 0; c < bangladesh[x][y].length; c++) {
+                            bangladesh[x][y][c].classList.toggle(e);
+                        }
+                    };
+                })(x, y);
+            }
+        }
+    }
+}
+
+
+
 //name Select
 function nameView(a) {
 	document.querySelector('#NameBar').innerHTML = a;
