@@ -476,7 +476,7 @@
 		var Homna = document.getElementById("Homna");
 		var Debidwar = document.getElementById("Debidwar");
 		var Daudkandi = document.getElementById("Daudkandi");
-		var ComillaSadarDakshin = document.getElementById("ComillaSadarDakshin");
+		var ComillaSdarDakshin = document.getElementById("ComillaSdarDakshin");
 		//chandpur
 		var ChandpurSadar = document.getElementById("ChandpurSadar");
 		var Faridganj = document.getElementById("Faridganj");

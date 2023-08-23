@@ -68,7 +68,8 @@ var bangladesh = [
 	[RangamatiSadar, Rajasthali, Naniarchar, Langadu, raKawkhali, Kaptai, Juraichhari, Belaichhari, Barkal, Baghaichhari],
 	[NoakhaliSadar, Subarnachar, Sonaimuri, Senbag, Kabirhat, Hatia, Companiganj, Chatkhil, Begumganj],
 	[LakshmipurSadar, Kamalnagar, Ramgati, Ramganj, Raipur],
-	[FeniSadar, Fulgazi, Daganbhuiyan, Chhagalnaiya, Sonagazi, Parshuram], [ComillaAdarshaSadar, Chauddagram, Chandina, Burichang, Brahmanpara, Barura, Titas, Nangalkot, Muradnagar, Monoharganj, Meghna, Laksam, Homna, Debidwar, Daudkandi, ComillaSadarDakshin],
+	[FeniSadar, Fulgazi, Daganbhuiyan, Chhagalnaiya, Sonagazi, Parshuram], 
+	[ComillaAdarshaSadar, Chauddagram, Chandina, Burichang, Brahmanpara, Barura, Titas, Nangalkot, Muradnagar, Monoharganj, Meghna, Laksam, Homna, Debidwar, Daudkandi, ComillaSdarDakshin],
 	[ChandpurSadar, Faridganj, Shahrasti, MatlabUttar, MatlabDakshin, Kachua, Hajiganj, Haimchar],
 	[BrahmanbariaSadar, Akhaura, Sarail, Nasirnagar, Nabinagar, Kasba, Bijoynagar, Bancharampur, Ashuganj]]
 
