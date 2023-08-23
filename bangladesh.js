@@ -91,7 +91,21 @@ var bangladesh = [
 //}
 
 
-
+//add Sadar upazila Color
+function findSadar(e){
+    for(var x=0; x<bangladesh.length;x++){
+        for(var y=0; y<bangladesh[x].length;y++){
+            for(var z=0; z<bangladesh[x][y].length;z++){
+				(function(x, y,z) {
+					if ((bangladesh[x][y][z].getAttribute('id')).toLowerCase().includes('sadar') ||
+					(bangladesh[x][y][z].getAttribute('id')).toLowerCase().includes('city')) {
+						bangladesh[x][y][z].classList.toggle(e);
+					}
+                })(x, y,z);
+			}
+		}
+	}
+}
 
 //add upazila Color
 function addupazila(e){
